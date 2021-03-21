@@ -1,6 +1,6 @@
 ## Struggling to find strong password?
 ## Don't worry just click on the link below.
-### [Password Generator]()
+### [Password Generator](https://sagar-sharma-7.github.io/Password-Generator/)
 
 ### ```NOTE: Open the above link in Google Chrome...```
 
