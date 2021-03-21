@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1e1e1e;
+    font-family: 'Special Elite', cursive;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerBox{
+    box-shadow: inset 5px 5px 11px #0c0c0c, 
+    inset -5px -5px 11px #303030;
+    color: #03dac5;
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    padding: 5vh 1vw 4vh 1vw;
+    text-align: center;
+    border-radius: 30px;
+}
+
+h1{
+    width: 70vw;
+}
+
+#copyBtn{
+    border-radius: 20px;
+    height: 10vh;
+    width: 15vw;
+    outline: none;
+    cursor: pointer;
+    color: #BB86FC;
+    background-color: #1e1e1e;
+    box-shadow: inset 12px -12px 24px #0c0c0c, 
+    inset -12px 12px 24px #303030;
+}
+
+.optionBox{
+    width: 90vw;
+    padding: 10vh 1vw;
+    color: #BB86FC;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    background-color: #1e1e1e;
+    box-shadow: inset 5px 5px 11px #0c0c0c, 
+    inset -5px -5px 11px #303030;
+    border-radius: 40px;
+}
+.checkbox{
+    margin-top: 3vh;
+}
+
+.lengthBox{
+    text-align: center;
+    color: #03dac5;
+}
+
+.checkbox:checked{
+    animation: checkbox 2s 1;
+}
+
+@keyframes checkbox{
+    50%{
+        transform: rotateX(360deg);
+    }
+}
+#slider{
+    width: 90vw;
+    -webkit-appearance: none;
+}
+#slider:focus{
+    outline: none;
+}
+
+#slider::-webkit-slider-runnable-track{
+    background: #1e1e1e;
+    box-shadow: inset 5px 5px 11px #0c0c0c, 
+    inset -5px -5px 11px #303030;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    width: 100%;
+    cursor: pointer;
+    height: 5vh;
+    border: 0px solid #1e1e1e;
+    text-align: center;
+}
+
+#slider::-webkit-slider-thumb{
+    border-radius: 50px; 
+    background: #03dac5;
+    box-shadow: inset 5px 5px 9px #03b9a7, 
+          inset -5px -5px 9px #03fbe3;
+    cursor: pointer;
+    -webkit-appearance: none;
+    height: 100%;
+    width: 30px;
+}
+
+#resultBtn{
+    width: 80vw;
+    height: 6vh;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #BB86FC;
+    border: 2px solid #BB86FC;
+    cursor: pointer;
+}
+
+#resultBtn:hover{
+    background: #BB86FC;
+    color: #fff;
+}
+
+
+@media all and (max-width: 600px){
+    h1{
+        font-size: 30px;
+    }
+    .optionBox{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media all and (max-width: 500px){
+    h1{
+        font-size: 26px;
+    }
+}
+
+@media all and (max-width: 400px){
+    h1{
+        width: 75vw;
+        font-size: 23px;
+    }
+    #copyBtn{
+        width: 15vw;
+    }
+}

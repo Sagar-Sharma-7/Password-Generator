@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Sagar Sharma">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <title>Random Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+<!-- header div -->
+        <div class="headerBox">
+            <h1 id="resultBox">Get Strongest Password</h1>
+            <button id="copyBtn">Copy</button>
+        </div>
+<!-- checkbox div -->
+        <div class="optionBox">
+            <div class="optionBox-box">
+                <input type="checkbox" class="checkbox" id="uppercase" name="uppercase"><br>
+                Uppercase
+            </div>
+            <div class="optionBox-box">
+                <input type="checkbox" class="checkbox" id="lowercase" name="lowercase"><br>
+                Lowercase
+            </div>
+            <div class="optionBox-box">
+                <input type="checkbox" class="checkbox" id="numbers" name="numbers" checked><br>
+                Numbers
+            </div>
+            <div class="optionBox-box">
+                <input type="checkbox" class="checkbox" id="symbols" name="symbols"><br>
+                Symbols
+            </div>
+        </div>
+<!-- length range div -->
+        <div class="lengthBox">
+            <input type="range" min="8" max="18" id="slider" value="10">
+            <br>
+            <br>
+            <p>Password Length is <span id="passwordLength"></span></p>
+        </div>
+        <button id="resultBtn">Generate Password</button>
+    </div>
+    
+
+
+
+
+
+
+
+<script src="./public/js/main.js"></script>
+</body>
+
+</html>
