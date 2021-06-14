@@ -2,9 +2,13 @@ const copyBtn = document.querySelector("#copyBtn");
 let resultBox = document.querySelector("#resultBox");
 const resultBtn = document.querySelector("#resultBtn");
 const checkbox = document.querySelectorAll(".checkbox");
-
 const slider = document.querySelector("#slider");
 const givenPassLeng = document.querySelector("#passwordLength");
+
+
+// text content
+resultBox.innerHTML = "Get Strongest Password";
+copyBtn.innerHTML = "Copy";
 
 let passLeng;
 setInterval(() => {
