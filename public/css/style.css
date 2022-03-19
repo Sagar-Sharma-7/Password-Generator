@@ -1,7 +1,40 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: calc(10px + 0.5vw);
+  }
+}
+
+body {
+  background-color: #222222;
+}
+
+header {
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 5vh 2vw;
+  color: #252525;
+  border-radius: 20px;
+  margin: 5px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: #222222;
+}
+
+div {
+  border: 1px solid white;
 }
 /*# sourceMappingURL=style.css.map */
