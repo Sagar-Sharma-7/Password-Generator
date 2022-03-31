@@ -16,7 +16,8 @@ html {
 }
 
 body {
-  background-color: #222222;
+  background-color: #171717;
+  color: #fff;
 }
 
 header {
@@ -31,10 +32,97 @@ header {
 
 header h1 {
   -webkit-text-stroke: 1px #fff;
-  -webkit-text-fill-color: #222222;
+  -webkit-text-fill-color: #171717;
 }
 
-div {
-  border: 1px solid white;
+.container {
+  border: 1px dashed orange;
+  width: 100vw;
+  height: 73vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container div {
+  margin: 1vw 1vh;
+  border-radius: 10px;
+}
+
+.container .password_box {
+  width: 80vw;
+  height: 12vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #171717;
+  -webkit-box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #252525;
+          box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #252525;
+}
+
+.container .password_box button {
+  border: none;
+  outline: none;
+  width: 10%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.container .password_box .password {
+  width: 80%;
+  font-size: 1.7rem;
+}
+
+.container .setting_box {
+  border: 1px dotted #fff;
+  width: 50vw;
+  height: 37vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .setting_box .option {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (15vw)[2];
+      grid-template-columns: repeat(2, 15vw);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .setting_box .option p {
+  text-align: center;
+}
+
+.container .setting_box .option input {
+  margin-left: 7vw;
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,7 +19,8 @@ html {
     }
   }
 body{
-    background-color: #222222;
+    background-color: #171717;
+    color: #fff;
 }
 header{
     text-align: center;
@@ -31,9 +32,58 @@ header{
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     h1 {
         -webkit-text-stroke: 1px #fff;
-        -webkit-text-fill-color: #222222;
+        -webkit-text-fill-color: #171717;
       }
 }
-div{
-    border: 1px solid white;
+
+.container{
+    div{
+        margin: 1vw 1vh;
+        border-radius: 10px;
+    }
+    border: 1px dashed orange;
+    @include dim(100vw, 73vh);
+    @include flex();
+    flex-direction: column;
+
+    .password_box{
+        @include dim(80vw, 12vh);
+        text-align: center;
+        @include flex();
+        background: #171717;
+box-shadow: inset 5px 5px 10px #0b0b0b,
+            inset -5px -5px 10px #252525;
+        button{
+            border:none;
+            outline: none;
+            @include dim(10%, 100%);
+            border-radius: 10px;
+            background-color:transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .password{
+            width: 80%;
+            font-size:1.7rem;
+        }
+    }
+    .setting_box{
+        border: 1px dotted #fff;
+        @include dim(50vw, 37vh);
+        display: grid;
+        justify-content:center;
+        .option{
+            display: grid;
+            grid-template-columns: repeat(2, 15vw);
+            justify-content:center;
+            align-items:center;
+            p{
+                text-align:center;  
+            }
+            input{
+                margin-left:7vw;
+            }
+        }
+    }
 }

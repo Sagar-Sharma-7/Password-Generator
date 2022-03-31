@@ -5,34 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Password Generator</title>
 </head>
 <body>
     <!-- Version 0.0.2 -->
+    <header>
+        <h1>Password Generator</h1>
+    </header>
+    
     <div class="container">
-        <header>
-             <h1>Password Generator</h1>
-        </header>
-        
-        <div class="password">
-            password here
+        <div class="password_box">
+            <button class="copy"><i class="fa-solid fa-clipboard"></i></button>
+            <div class="password">Your Password Here</div>
+            <button class="reload"><i class="fa-solid fa-arrow-rotate-right"></i></button>
         </div>
        <!--  -->
         <div class="setting_box">
             <div class="option">
-                Uppercase Letters <input type="checkbox" id="upper">
+                <p>Uppercase Letters</p>
+                <input type="checkbox" id="upper">
             </div>
 
             <div class="option">
-                Lowercase Letters <input type="checkbox" id="lower">
+                <p>Lowercase Letters</p>
+                <input type="checkbox" id="lower">
             </div>
 
             <div class="option">
-                Numbers <input type="checkbox" id="num">
+                <p>Numbers</p>
+                <input type="checkbox" id="num">
             </div>
 
             <div class="option">
-                Symbols <input type="checkbox" id="symbol">
+                <p>Symbols</p>
+                <input type="checkbox" id="symbol">
             </div>
         </div>
 <!--  -->
