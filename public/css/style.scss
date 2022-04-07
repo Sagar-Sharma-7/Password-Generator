@@ -1,3 +1,7 @@
+
+$bg : #171717;
+$secondary_c:rebeccapurple;
+
 @mixin flex($jus: center, $alg: center){
     display: flex;
     justify-content: $jus;
@@ -19,7 +23,7 @@ html {
     }
   }
 body{
-    background-color: #171717;
+    background-color: $bg;
     color: #fff;
 }
 header{
@@ -32,7 +36,7 @@ header{
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     h1 {
         -webkit-text-stroke: 1px #fff;
-        -webkit-text-fill-color: #171717;
+        -webkit-text-fill-color: $bg;
       }
 }
 
@@ -41,7 +45,7 @@ header{
         margin: 1vw 1vh;
         border-radius: 10px;
     }
-    border: 1px dashed orange;
+    border: 2px dashed $secondary_c;
     @include dim(100vw, 73vh);
     @include flex();
     flex-direction: column;
@@ -50,7 +54,7 @@ header{
         @include dim(80vw, 12vh);
         text-align: center;
         @include flex();
-        background: #171717;
+        background: $bg;
 box-shadow: inset 5px 5px 10px #0b0b0b,
             inset -5px -5px 10px #252525;
         button{
@@ -69,7 +73,7 @@ box-shadow: inset 5px 5px 10px #0b0b0b,
         }
     }
     .setting_box{
-        border: 1px dotted #fff;
+        border: 2px dotted #fff;
         @include dim(50vw, 37vh);
         display: grid;
         justify-content:center;
@@ -80,10 +84,33 @@ box-shadow: inset 5px 5px 10px #0b0b0b,
             align-items:center;
             p{
                 text-align:center;  
+                font-size: 1.1rem;
             }
             input{
                 margin-left:7vw;
             }
+            input[type="checkbox"]{
+                appearance:none;
+                background-color: $bg;
+                width: 1.5rem;
+                height: 1.5rem;
+                border: 3px double #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                display: grid;
+                place-content: center;
+            }
+            input[type="checkbox"]::before{
+                content: "";
+                width: 0.8rem;
+                height: 0.8rem;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1.2rem 1.2rem $secondary_c;
+            }
+            input[type="checkbox"]:checked::before {
+                transform: scale(1);
+              }
         }
     }
 }

@@ -36,7 +36,7 @@ header h1 {
 }
 
 .container {
-  border: 1px dashed orange;
+  border: 2px dashed rebeccapurple;
   width: 100vw;
   height: 73vh;
   display: -webkit-box;
@@ -95,7 +95,7 @@ header h1 {
 }
 
 .container .setting_box {
-  border: 1px dotted #fff;
+  border: 2px dotted #fff;
   width: 50vw;
   height: 37vh;
   display: -ms-grid;
@@ -120,9 +120,44 @@ header h1 {
 
 .container .setting_box .option p {
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .container .setting_box .option input {
   margin-left: 7vw;
+}
+
+.container .setting_box .option input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #171717;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px double #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.container .setting_box .option input[type="checkbox"]::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms transform ease-in-out;
+  transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+  -webkit-box-shadow: inset 1.2rem 1.2rem rebeccapurple;
+          box-shadow: inset 1.2rem 1.2rem rebeccapurple;
+}
+
+.container .setting_box .option input[type="checkbox"]:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=style.css.map */
