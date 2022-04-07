@@ -73,21 +73,19 @@ box-shadow: inset 5px 5px 10px #0b0b0b,
         }
     }
     .setting_box{
-        border: 2px dotted #fff;
         @include dim(50vw, 37vh);
         display: grid;
         justify-content:center;
+        border: 2px dotted #fff;
         .option{
-            display: grid;
-            grid-template-columns: repeat(2, 15vw);
-            justify-content:center;
-            align-items:center;
+            padding: 2vh 1vw 2vh 1vw;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            @include flex(space-between, center);
+            @include dim(25vw, 5vh);
             p{
                 text-align:center;  
                 font-size: 1.1rem;
-            }
-            input{
-                margin-left:7vw;
             }
             input[type="checkbox"]{
                 appearance:none;

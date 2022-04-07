@@ -95,7 +95,6 @@ header h1 {
 }
 
 .container .setting_box {
-  border: 2px dotted #fff;
   width: 50vw;
   height: 37vh;
   display: -ms-grid;
@@ -103,28 +102,29 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 2px dotted #fff;
 }
 
 .container .setting_box .option {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (15vw)[2];
-      grid-template-columns: repeat(2, 15vw);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 2vh 1vw 2vh 1vw;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 25vw;
+  height: 5vh;
 }
 
 .container .setting_box .option p {
   text-align: center;
   font-size: 1.1rem;
-}
-
-.container .setting_box .option input {
-  margin-left: 7vw;
 }
 
 .container .setting_box .option input[type="checkbox"] {
