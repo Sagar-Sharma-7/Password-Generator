@@ -111,4 +111,24 @@ box-shadow: inset 5px 5px 10px #0b0b0b,
               }
         }
     }
+    .length_box{
+        border: 1px solid green;
+        @include dim(60vw, 7vh);
+        @include flex(space-around, center);
+        .range{
+            outline: none;
+            @include dim(35vw, 3vh);
+            appearance:none;
+            background: #111;
+            border-radius: 15px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+        }
+        .range::-webkit-slider-thumb{
+            appearance: none;
+            @include dim(20px, 30px);
+            border-radius: 20%;
+            background-color: $secondary_c;
+            cursor: pointer;
+        }
+    }
 }

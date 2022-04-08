@@ -160,4 +160,41 @@ header h1 {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
+
+.container .length_box {
+  border: 1px solid green;
+  width: 60vw;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .length_box .range {
+  outline: none;
+  width: 35vw;
+  height: 3vh;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #111;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 5px black;
+          box-shadow: inset 0 0 5px black;
+}
+
+.container .length_box .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 30px;
+  border-radius: 20%;
+  background-color: rebeccapurple;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
