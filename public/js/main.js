@@ -46,20 +46,19 @@ run_btn.addEventListener("click", ()=> {
     });
     console.log(arr);
     arr_len = arr.length;
-    // const r1 = arr[Math.floor(Math.random() * arr_len)];
-    // console.log(r1);
     password = [];
     c_per_pass = Math.floor(p_len/arr_len);
 
     let i;
     for(i = 0; i < arr_len; i++) {
-       const  x = arr[i]
-       let y = 0
+       const  x = arr[i];
+       const z = characters[x].length; // characters length
+       let y = 0;
        while (y < c_per_pass) {
-           password.push(characters[x][Math.floor(Math.random() * 10)]);
+           password.push(characters[x][Math.floor(Math.random() * z)]);
            y += 1;
        };
-       console.log(password);
-    }
+    };
+    console.log(password);
 
 });
