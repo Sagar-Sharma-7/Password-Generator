@@ -49,6 +49,7 @@ run_btn.addEventListener("click", ()=> {
     password = [];
     c_per_pass = Math.floor(p_len/arr_len);
 
+    // 3. making pass of equal character type
     let i;
     for(i = 0; i < arr_len; i++) {
        const  x = arr[i];
@@ -59,6 +60,21 @@ run_btn.addEventListener("click", ()=> {
            y += 1;
        };
     };
-    console.log(password);
+    console.log(password); // password per char ready
 
+    //4. if required adding random characters in password
+    if (password.length != p_len){
+        console.log("more char");
+        let all_char_arr = [];
+        const all_char = all_char_arr.concat(characters.uppercase, characters.lowercase, characters.numbers, characters.symbols);
+        const req_char = p_len - password.length;
+        let a = 0;
+        console.log(all_char);
+        while (a < req_char){
+            password.push(all_char[Math.floor(Math.random() * all_char.length)]);
+            a += 1;
+        };
+    };
+    console.log(password);
+    
 });
