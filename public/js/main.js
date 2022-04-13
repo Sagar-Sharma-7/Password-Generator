@@ -18,12 +18,6 @@ slider.oninput = function(){
 };
 
 
-// creating arr of each type of char
-// const u_char = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ']; // uppercase letter array
-// const l_char = [...'abcdefghijklmnopqyrstuvwxyz']; // lowercase letter array
-// const n_char = [...'0123456789']; // numbers array
-// const s_char = [...'!@#$&*?_-']; // symbols array
-
 const characters = {
     uppercase: [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'],
     lowercase: [...'abcdefghijklmnopqyrstuvwxyz'],
@@ -75,6 +69,32 @@ run_btn.addEventListener("click", ()=> {
             a += 1;
         };
     };
+    // all the charc of password are ready.
     console.log(password);
+
+    // 5. shuffling characters of password.
+    const shuffling_pass = (arr) => {
+        let a;
+        for(a = arr.length -1 ; a > 0; a--){
+            let b = Math.floor(Math.random() * (a+1));
+            let temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
+        };
+        return arr;
+    };
+
+    // 6. getting array of final password.
+    const final_pass = shuffling_pass(password);
+    console.log(final_pass);
+
+    // 7. showing password.
+    let q;
+    let p = "";
+    for(q = 0; q < final_pass.length; q++){
+        p += final_pass[q];
+    };
+    p_div.innerHTML = p;
+
     
 });
