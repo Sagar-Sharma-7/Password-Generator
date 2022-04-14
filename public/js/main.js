@@ -44,7 +44,10 @@ run_btn.addEventListener("click", ()=> {
     password = [];
     c_per_pass = Math.floor(p_len/arr_len);
 
-    // 3. making pass of equal character type
+    if (arr_len == 0){
+        p_div.innerHTML = "Select any character type...";
+    }else{
+        // 3. making pass of equal character type
     let i;
     for(i = 0; i < arr_len; i++) {
        const  x = arr[i];
@@ -96,6 +99,7 @@ run_btn.addEventListener("click", ()=> {
             p += final_pass[q];
     };
     p_div.innerHTML = p;
+    }
 });
 
 
