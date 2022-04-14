@@ -1,6 +1,7 @@
 // variables
+const heading = document.querySelector("#heading");
 const p_div = document.querySelector(".password");
-const copy_btn = document.querySelector(".copy_btn");
+const copy_btn = document.querySelector(".copy");
 const upper = document.querySelector("#upper");
 const lower = document.querySelector("#lower");
 const num = document.querySelector("#num");
@@ -38,7 +39,7 @@ run_btn.addEventListener("click", ()=> {
             arr.push(e.name);
         };
     });
-    console.log(arr);
+    // console.log(arr);
     arr_len = arr.length;
     password = [];
     c_per_pass = Math.floor(p_len/arr_len);
@@ -54,23 +55,23 @@ run_btn.addEventListener("click", ()=> {
            y += 1;
        };
     };
-    console.log(password); // password per char ready
+    // console.log(password); // password per char ready
 
     //4. if required adding random characters in password
     if (password.length != p_len){
-        console.log("more char");
+        // console.log("more char");
         let all_char_arr = [];
         const all_char = all_char_arr.concat(characters.uppercase, characters.lowercase, characters.numbers, characters.symbols);
         const req_char = p_len - password.length;
         let a = 0;
-        console.log(all_char);
+        // console.log(all_char);
         while (a < req_char){
             password.push(all_char[Math.floor(Math.random() * all_char.length)]);
             a += 1;
         };
     };
     // all the charc of password are ready.
-    console.log(password);
+    // console.log(password);
 
     // 5. shuffling characters of password.
     const shuffling_pass = (arr) => {
@@ -86,15 +87,26 @@ run_btn.addEventListener("click", ()=> {
 
     // 6. getting array of final password.
     const final_pass = shuffling_pass(password);
-    console.log(final_pass);
+    // console.log(final_pass);
 
     // 7. showing password.
     let q;
     let p = "";
     for(q = 0; q < final_pass.length; q++){
-        p += final_pass[q];
+            p += final_pass[q];
     };
     p_div.innerHTML = p;
+});
 
-    
+
+// copy btn
+copy_btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(p_div.innerHTML);
+    heading.innerHTML = "Password Copied!";
+    p_div.style.color = "#56E695";
+
+    setTimeout(() => {
+        heading.innerHTML = "Password Generator";
+    p_div.style.color = "#FFFFFF";
+    },900)
 });
