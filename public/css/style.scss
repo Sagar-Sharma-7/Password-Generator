@@ -150,3 +150,16 @@ box-shadow: inset 5px 5px 10px #0b0b0b,
         }
     }
 }
+
+// responsive
+@media all and (max-width: 800px){
+    .container{
+        border-top: none;
+        border-bottom: none;
+        border-right: 2px solid dashed $secondary_c;
+        border-left: 2px solid dashed $secondary_c;
+        .password_box{
+            @include dim(90vw, 12vh);
+        }
+    }
+}

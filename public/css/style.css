@@ -219,4 +219,17 @@ header h1 {
   background-color: #56E695;
   color: #171717;
 }
+
+@media all and (max-width: 800px) {
+  .container {
+    border-top: none;
+    border-bottom: none;
+    border-right: 2px solid dashed #56E695;
+    border-left: 2px solid dashed #56E695;
+  }
+  .container .password_box {
+    width: 90vw;
+    height: 12vh;
+  }
+}
 /*# sourceMappingURL=style.css.map */
