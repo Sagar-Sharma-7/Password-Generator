@@ -231,5 +231,22 @@ header h1 {
     width: 90vw;
     height: 12vh;
   }
+  .container .setting_box {
+    width: 80vw;
+    height: 37vh;
+  }
+  .container .setting_box .option {
+    padding: 2vh 2vw;
+    width: 50vw;
+    height: 5vh;
+  }
+  .container .length_box {
+    width: 80vw;
+    height: 7vh;
+  }
+  .container .length_box .range {
+    width: 50vw;
+    height: 3vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -161,5 +161,18 @@ box-shadow: inset 5px 5px 10px #0b0b0b,
         .password_box{
             @include dim(90vw, 12vh);
         }
+        .setting_box{
+            @include dim(80vw, 37vh);
+            .option {
+                padding: 2vh 2vw;
+                @include dim(50vw, 5vh)
+            }
+        }
+        .length_box{
+            @include dim(80vw, 7vh);
+            .range {
+                @include dim(50vw, 3vh)
+            }
+        }
     }
 }
