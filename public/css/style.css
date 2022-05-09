@@ -96,6 +96,7 @@ header h1 {
 .container .password_box .password {
   width: 80%;
   font-size: 1.7rem;
+  word-break: break-all;
 }
 
 .container .setting_box {
